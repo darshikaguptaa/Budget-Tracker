@@ -7,7 +7,6 @@ import Main from "./components/Main/Main";
 import {
     PushToTalkButton,
     PushToTalkButtonContainer,
-    ErrorPanel,
 } from "@speechly/react-ui";
 
 function App() {
