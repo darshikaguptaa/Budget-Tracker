@@ -19,16 +19,34 @@ export const Provider = ({ children }) => {
     };
 
     const balance = transactions.reduce((acc, currVal) => {
-        return currVal.type == "Expense"
+        return currVal.type === "Expense"
             ? acc - currVal.amount
             : acc + currVal.amount;
     }, 0);
 
-    console.log(transactions);
+    const spent = transactions.filter((t) => {
+        if (t.type === "Expense") {
+            return t;
+        }
+    });
+    const recieved = transactions.filter((t) => {
+        if (t.type === "Income") {
+            return t;
+        }
+    });
+
+    console.log({ spent, recieved });
 
     return (
         <ExpenseTrackerContext.Provider
-            value={{ deleteTransaction, addTransaction, transactions, balance }}
+            value={{
+                deleteTransaction,
+                addTransaction,
+                transactions,
+                balance,
+                spent,
+                recieved,
+            }}
         >
             {children}
         </ExpenseTrackerContext.Provider>

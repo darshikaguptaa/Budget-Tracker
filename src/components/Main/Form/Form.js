@@ -11,7 +11,7 @@ import {
     Select,
     MenuItem,
 } from "@material-ui/core";
-import useStyles from "./styles";
+import useStyles from "./formStyles";
 import {
     incomeCategories,
     expenseCategories,

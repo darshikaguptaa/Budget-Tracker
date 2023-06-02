@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { Delete, AttachMoney, MoneyOff } from "@material-ui/icons";
 import { ExpenseTrackerContext } from "../../../context/context";
-import useStyles from "./styles";
+import useStyles from "./listStyles";
 
 const List = () => {
     const classes = useStyles();

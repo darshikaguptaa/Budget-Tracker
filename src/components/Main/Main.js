@@ -7,7 +7,7 @@ import {
     Grid,
     Divider,
 } from "@material-ui/core";
-import useStyles from "./styles";
+import useStyles from "./mainStyles";
 import Form from "./Form/Form";
 import List from "./List/List";
 import { ExpenseTrackerContext } from "../../context/context";
